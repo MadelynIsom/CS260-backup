@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport'content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+        <link rel="icon" href="triangleicon.png">
+        <title>Color Generator</title>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
+    <body>
+        <h1>Color Generator</h1>
+        
+        <div id="content">
+            <p class="instructions">Generate a random color in HEX, RGB, or HSL.</p>
+            <input id="generate-color" type="submit" value="Generate Random Color">
+    
+            <p class="instructions">Or, enter a color to convert to HEX, RGB, or HSL.</p>
+            
+            <input id="color-code" type="text" placeholder="Enter a color code"></input>
+            <select id="selector">
+              <option value="HEXtoRGB">HEX to RGB</option>
+              <option value="HEXtoHSL">HEX to HSL</option>
+              <option value="RGBtoHEX">RGB to HEX</option>
+              <option value="RGBtoHSL">RGB to HSL</option>
+              <option value="HSLtoHEX">HSL to HEX</option>
+              <option value="HSLtoRGB">HSL to RGB</option>
+            </select>
+            <input id="convert" type="submit" value="Convert"></input>
+        </div>
+        
+
+        <div id="footer">
+        	<h2>
+                <a href="https://github.com/BYU-CS-260/lab2-javascript-MadelynIsom" target="_blank">GitHub</a>
+          	</h2>
+      	</div>
+        
+        <script text="type/javascript" src="script.js"></script>
+    </body>
+</html>
