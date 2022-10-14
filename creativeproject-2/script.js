@@ -1,7 +1,6 @@
 const targetDiv = document.getElementById("color-results");
 targetDiv.style.display = "none";
 
-
 //generate color randomly
 document.getElementById("generate-color").addEventListener("click", function(event) {
     event.preventDefault();
@@ -31,6 +30,10 @@ document.getElementById("generate-color").addEventListener("click", function(eve
             console.log(hslCode);
             
             document.getElementById("color-box").style.backgroundColor = hexCode;
+            document.getElementById("color-generator").style.color = hexCode;
+            document.getElementById("color-converter").style.color = hexCode;
+            document.getElementById("footer").style.color = hexCode;
+            document.getElementById("footer").style.borderColor = hexCode;
             
             document.getElementById("hex-code").innerHTML = hexCode;
             document.getElementById("rgb-code").innerHTML = rgbCode;
@@ -53,6 +56,12 @@ document.getElementById("convert").addEventListener("click", function(event) {
   
   fetch(url)
     .then(function(response) {
+      // make sure the request was successful
+      if (response.status != 200) {
+        let errmsg = "<p>Bad request, please select the right conversion.</p>";
+        document.getElementById("conversion-results").innerHTML = errmsg;
+        return;
+      }
       return response.json();
     }).then(function(json) {
         console.log(json);

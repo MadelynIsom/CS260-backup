@@ -7,27 +7,34 @@
         <title>Color Generator</title>
         <link rel='stylesheet' href='styles.css'/>
     </head>
-    <body>
-        <h1>Color Generator</h1>
+    <body id="body">
         
         <div id="content">
-            <p class="instructions">Generate a random color in HEX, RGB, or HSL.</p>
-            <p class="instructions">Optionally specify a hue by name (ex: yellow) or number on the hue scale [0-359].</p>
-            <input id="generate-color-by-hue" type="text" placeholder="Enter a hue (optional)"></input>
-            <input id="generate-color" type="submit" value="Generate Random Color">
+            <h1 id="color-generator" style="color: #5D6063;">Color Generator</h1>
+            <p class="instructions">Specify a hue by name or number.</p>
+            
+            <form>
+                <input id="generate-color-by-hue" type="text" placeholder='"yellow" or 0-359 (optional)'></input>
+                <input id="generate-color" type="submit" value="Generate Random Color">
+            </form>
+
             
             <div id="color-results">
-                <div id="color-box" style="height: 50px; width: 50px;"></div>
+                <div id="color-box"></div>
                 <div class="color-codes">
-                    <div id="hex-code"></div>  
+                    <div id="hex-code"></div>
                     <div id="rgb-code"></div>
                     <div id="hsl-code"></div>
                 </div>
             </div>
-    
-            <p class="instructions">Or, enter a color to convert to HEX, RGB, or HSL. Example: FFFFFF (hex) and 120-200-30 for RGB and HSL.</p>
             
-            <input id="color-code" type="text" placeholder="Enter a color code"></input>
+            <h1 id="color-converter" style="color: #5D6063;">Color Converter</h1>
+    
+            <p class="instructions">For HEX codes don't use the preceeding #.
+                    For RGB and HSL, follow the form #-#-# (i.e 120-200-30).</p>
+            
+            <form>
+            <input id="color-code" type="text" placeholder='Enter color code'></input>
             <select id="selector">
               <option value="hex2rgb">HEX to RGB</option>
               <option value="hex2hsl">HEX to HSL</option>
@@ -37,6 +44,7 @@
               <option value="hsl2rgb">HSL to RGB</option>
             </select>
             <input id="convert" type="submit" value="Convert"></input>
+            </form>
             
             <div id="conversion-results">
                 
@@ -45,8 +53,8 @@
         </div>
         
 
-        <div id="footer">
-        	<h2>
+        <div id="footer" style="color: #5D6063;">
+        	<h2 id="github-link">
                 <a href="https://github.com/MadelynIsom/color-generator/tree/main/creativeproject-2" target="_blank">GitHub</a>
           	</h2>
       	</div>
