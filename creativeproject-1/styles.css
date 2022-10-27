@@ -1,0 +1,316 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+  font-family: andale mono, monospace !important;
+  font-weight: 500 !important;
+  overflow: auto;
+}
+
+.navbar-brand {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.nav-item:hover, .nav-link:hover, .navbar-brand:hover {
+  color: #fbb83c !important;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-link {
+  position: relative;
+  display: inline-block;
+}
+
+.social-link .social-active {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.social-link:hover .social-active {
+  display: inline;
+}
+
+
+#background-image {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#background-image img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+
+.content-container {
+  max-width: 95vw;
+  margin: 1rem auto;
+  position: relative;
+  color: black;
+  font-family: "courier new", monospace;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .2em;
+  text-transform: lowercase;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+
+
+#homebox {
+  display: flex;
+  margin: auto;
+  padding-top: 6rem;
+}
+
+#box1, #box2, #box3 {
+  margin: 3rem;
+}
+
+#box1, #box2 {
+  font-family: andale mono, monospace !important;
+  font-weight: 500 !important;
+  text-transform: none;
+}
+
+#h1box {
+  display: flex;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.h2box {
+  display: flex;
+  margin: auto;
+  background-color: #FACE7D;
+}
+
+.h3box {
+  display: flex;
+  margin: auto;
+  justify-content: flex-start;
+  text-transform: none;
+  padding-bottom: 20px;
+}
+
+.h4box {
+  display: flex;
+  justify-content: flex-start;
+  font-size: .8em
+}
+
+.spacer {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+hr {
+  border-top: 2px solid black;
+}
+
+
+.shop-item {
+  border-color: black;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#turtle, #bigbrain {
+  text-decoration: none;
+  color: black;
+}
+
+
+h1, h2{
+  font-family: andale mono, monospace !important;
+  font-weight: 500 !important;
+  text-transform: none;
+}
+
+#faq-image {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.portfolio {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.text-container {
+  margin-top: 5rem;
+}
+
+#profilepic {
+  width: 70%;
+  height: auto;
+  max-width: 500px;
+  position: relative;
+}
+
+
+
+/*
+.buttons {
+  justify-content: center;
+  font-size: 5vw;
+  text-align: center;
+  border:solid 1px black;
+  border-radius: 4px;
+  background: transparent;
+  color: black;
+}
+
+.gif {
+  max-width: 20%;
+  max-height: 4em;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.buttons:hover {
+  color: #fbb83c;
+  border: solid 2px #fbb83c;
+}
+*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+@media only screen and (min-width: 600px) { /* desktop display */ /*
+  .buttons {
+    font-size: 2vw;
+    width: 500px;
+    text-align: center;
+  } */
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  .navbar-nav, .nav-link {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  
+  
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar-brand {
+      margin-left: .5rem;
+  }
+}
+
+
+@media only screen and (max-width: 1299px) { /* TABLET display */
+  .navbar-nav {
+    padding-left: 50px !important;
+    margin-right: 10px !important;
+  }
+
+  .nav-item {
+    margin-top: 5px !important;
+  }
+  
+  .navbar-collapse {
+    width: auto !important;
+  }
+}
+
+
+@media only screen and (min-width: 1300px) { /* DESKTOP */
+  .navbar .container-fluid, .navbar-expand-lg .navbar-collapse, .navbar-expand-lg .navbar-nav, .navbar-brand{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar {
+    width: 18%;
+    height: 100vh;
+  }
+  
+  .container-fluid {
+    margin-left: 1rem;
+    margin-bottom: 4rem;
+  }
+  
+  
+  .navbar-logo {
+    margin-left: 3.3rem;
+    margin-bottom: 50px;
+  }
+
+  .content-container {
+    margin: 0;
+    max-width: 60%;
+    top: -100vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  .social-icons {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+
+}

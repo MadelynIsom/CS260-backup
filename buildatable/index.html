@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "en">
+        <style>
+          /* given styling to define a cleaner look for the table */
+          table  { border-collapse: collapse; }
+          td, th { border: 1px solid black; padding: 3px 8px; }
+          th     { text-align: left; }
+        </style>
+    </head>
+    <body>
+        <h1>Mountains</h1>
+        
+        <div id="mountains"></div>
+        
+        <script> 
+        
+          const MOUNTAINS = [
+            {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+            {name: "Everest", height: 8848, place: "Nepal"},
+            {name: "Mount Fuji", height: 3776, place: "Japan"},
+            {name: "Vaalserberg", height: 323, place: "Netherlands"},
+            {name: "Denali", height: 6168, place: "United States"},
+            {name: "Popocatepetl", height: 5465, place: "Mexico"},
+            {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+          ];
+        
+          // Your code here
+          
+          /*
+          function buildTable(arrayOfObjects) {
+              var table = document.createElement("table");
+              var cells = Object.keys(arrayOfObjects[0]);
+              var headRow = document.createElement("tr");
+              cells.forEach(function(cell) {
+                  var headCell = document.createElement("th");
+                  headCell.textContent = cell;
+                  headRow.appendChild(headCell);
+              });
+              table.appendChild(headRow);
+              
+              arrayOfObjects.forEach(function(object) {
+                  var row = document.createElement("tr");
+                  cells.forEach(function(cell) {
+                      var cell = document.createElement("td");
+                      cell.textContent = object[cell];
+                      if (typeof object[cell] == "number") {
+                          cell.style.textAlign = "right";
+                      }
+                      row.appendChild(cell);
+                  });
+                  table.appendChild(row);
+              });
+              return table;
+          }
+          
+          document.body.appendChild(buildTable(MOUNTAINS));
+          */
+
+            function buildTable(data) {
+                var headers = Object.keys(data[0]);
+                var table = document.createElement('table');
+                var headerRow = document.createElement('tr');
+                headers.forEach(function(header){
+                    var headerEl = document.createElement('th');
+                    headerEl.textContent = header;
+                    headerRow.appendChild(headerEl);
+                });
+                table.appendChild(headerRow);
+                
+                data.forEach(function(mountain){
+                    var row = document.createElement('tr');
+                    for (prop in mountain) {
+                        var el = document.createElement('td');
+                        if (typeof mountain[prop] === 'number') {
+                            el.style.textAlign = "right";
+                        }
+                        el.textContent = mountain[prop];
+                        row.appendChild(el);
+                    }
+                    table.appendChild(row);
+                });
+            
+                return table;
+            }
+            
+            document.body.appendChild(buildTable(MOUNTAINS));
+
+
+          
+        </script>
+    </body>
+</html>

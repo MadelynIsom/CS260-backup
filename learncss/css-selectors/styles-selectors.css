@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, ul {
+    background-color: #EEB75A; /*Light Yellow*/
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:link {
+    color: white;
+}
+
+li a:visited {
+    color: aqua;
+}
+
+li a:hover {
+    background-color: #111;
+    text-decoration: none;
+}
+
+
+p {
+    color: #CBCBCB
+}
+
+/*
+li {
+    float: left;
+    
+}
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+*/
+
+.synopsis {
+  color: #CBCBCB;        /* Light gray */
+  font-style: italic;
+}
+
+.synopsis em {
+    font-style: normal;
+}
+
+.button:link,
+.button:visited {
+    display: block;
+    text-decoration: none;
+    
+    color: #FFF;
+    background-color: #5995DA;  /* Blue */
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+
+    width: 200px;
+    margin: 20px auto;
+}
+
+.button:hover
+.buttone:visited:hover {
+    color: #FFF;
+    background-color: #76AEED;  /* Light blue */
+}
+
+.button:active
+.button:visited:active {
+    color: #FFF;
+    background-color: #5995DA;  /* Blue */
+}
+
+.call-to-action:link,
+.call-to-action:visited {
+  font-style: italic;
+  background-color: #EEB75A;     /* Yellow */
+}
+
+.call-to-action:hover,
+.call-to-action:visited:hover {
+  background-color: #F5CF8E;     /* Light yellow */
+}
+
+.call-to-action:active,
+.call-to-action:visited:active {
+  background-color: #EEB75A;     /* Yellow */
+}
+
+.page {
+    width: 600px;
+    margin: 0 auto;
+}
+
+/*
+.page h1 {
+    background-color: #FFA68E;
+}
+*/
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: aqua;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited:hover {
+    color: orange;
+}
+
+a:visited:active {
+    color: red;
+}
+
+body {
+    text-align: center;
+    color: #414141;
+    background-color: #626262;
+}
+
+.page > p:last-of-type {
+    margin-bottom: 50px;
+}
+
+
+#button-2 {
+    color: #5D6063;  /* Dark gray */
+}
+

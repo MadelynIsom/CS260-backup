@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>Excuse Generator</title>
+
+<body>
+
+  <p>Excuse Generator</p>
+  <div id="excuse">no excuse</div>
+
+
+<script>
+/*import fetch from 'node-fetch';*/
+
+  var myurl = "https://excuser.herokuapp.com/v1/excuse";
+  console.log(myurl);
+  fetch(myurl)
+    .then(function(response) {
+      console.log(response);
+      return response.json();
+    }).then(function(json) {
+      console.log("This is the json");
+      console.log(json);
+      const container = document.getElementById("excuse");
+      container.textContent = json[0].excuse;
+    });
+</script>
+</body>
+</html>

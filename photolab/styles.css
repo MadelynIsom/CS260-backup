@@ -1,0 +1,230 @@
+.background {
+    content: none;
+    background-color: #FFF7A9;
+}
+
+
+/* Menu */
+.bg-dark {
+    background-color: #EED271 !important; /*dark yellow */
+}
+
+.navbar {
+    font-family: Verdana cursive !important;
+    font-weight: bold;
+
+}
+
+.navbar-brand {
+    color: #352902 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #352902 !important;
+}
+
+/* create active style for menu bar with this color on active tab: #F1E3A2 */
+.active {
+    background-color: #FFF7A9; /*light yellow */
+}
+
+/*images and portfolio*/
+
+img {
+    width: 100%;
+}
+
+.container {
+    border: #FFF7A9 solid 3px;
+    content: none;
+    width: 100%;
+    background-color: #FFF7A9;
+}
+
+/*HOME PAGE*/
+
+.container-home {
+    border: #FFF7A9 solid 3px;
+    content: none;
+    width: 100%;
+    background-color: #FFF7A9;
+}
+
+.text-home {
+  disply: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  width: 100%;
+  font-size: 20px;
+}
+
+h2, h3 {
+  font-weight: bold;
+}
+
+.content-home {
+  border: #FFF7A9 solid 3px;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.text-home {
+  padding-top: 10px;
+  font-family: Courier New, monospace;
+  font-weight: 100;
+  color: #352902;
+}
+
+.image-home {
+  border: #FFF7A9 solid 3px;
+  padding: 20px;
+  width: 100%;
+  
+}
+
+/*ABOUT PAGE*/
+
+.container-about {
+    border: #FFF7A9 solid 3px;
+    content: none;
+    width: 100%;
+    background-color: #FFF7A9;
+}
+
+.text-about {
+  disply: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  width: 100%;
+  font-size: 20px;
+}
+
+
+.content-about {
+  border: #FFF7A9 solid 3px;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.text-about {
+  padding-top: 10px;
+  font-family: Courier New, monospace;
+  font-weight: 100;
+  color: #352902;
+}
+
+.image-about {
+  border: #FFF7A9 solid 3px;
+  padding: 20px;
+  width: 100%;
+}
+
+
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.portfolio { /* Masonry container */
+  column-count: 3;
+  margin: 1.5em auto;
+  column-gap: 1.5em;
+  background-color: #FFF7A9; /*light yellow */
+}
+
+.image { /* Masonry bricks or child elements */
+  background-color: #eee;
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  margin: 0 0 1.5em;
+}
+
+/* REVIEWS */
+
+.comments {
+  font-family: Courier New, monospace;
+  font-weight: 100;
+  color: #352902;
+  overflow: hidden;
+  background-color: #FFF7A9; /*light yellow*/
+}
+
+.comment-title {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.comment-item {
+    float: left;
+    width: 97.5%;
+    margin: 20px 1.15%;
+    height: auto;
+    background-color: #EBE49D;    /* dark yellow */;
+}
+
+.avatar{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 25px;
+    border-radius: 40px;
+    background-color: #FAFFFF;
+}
+
+.username{
+    margin-top: 30px;
+}
+
+.comment {
+    margin: 10px;
+    width: 60%;
+    padding-left: 10px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.footer {
+  background-color: #EED271;
+  content: none;
+  height: 100px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 500px) {
+  .image-home {
+    width: 60%;
+    margin: auto;
+  }
+  
+  .image-about {
+    width: 60%;
+    margin: auto;
+  }
+  
+  .comment-item {
+
+}
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .portfolio {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 539px) {
+  .portfolio {
+    column-count: 1;
+  }
+}
